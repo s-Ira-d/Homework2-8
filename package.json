@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "parcel src/index.html",
-    "build": "parcel build src/*.html --no-cache --public-url ./",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "start": "parcel serve index.html",
+    "build": "parcel build index.html",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -19,6 +18,11 @@
   },
   "homepage": "https://github.com/s-Ira-d/Homework2-8#readme",
   "devDependencies": {
-    "parcel": "^2.16.1"
+    "@parcel/transformer-inline-string": "^2.16.1",
+    "parcel": "^2.16.1",
+    "parcel-transformer-handlebars": "^1.0.0"
+  },
+  "dependencies": {
+    "handlebars": "^4.7.8"
   }
 }
